@@ -28,14 +28,16 @@ function divide(a, b) {
     if (b === 0) {
         alert(`can't divide by 0`);
     } else {
-        a / b;
+        return a / b;
     }
 }
+
 
 function inputNumber(number) {
     const {
         displayValue,
-        waitingForSecondValue
+        waitingForSecondValue,
+        operator
     } = calculator;
     console.log(calculator);
     if (waitingForSecondValue === true) {
@@ -47,10 +49,8 @@ function inputNumber(number) {
 }
 
 function updateDisplay() {
-    inputField.value = `${calculator.operator} ${calculator.displayValue} `;
+    inputField.value = `${calculator.operator} ${calculator.displayValue}`;
 }
-// updateDisplay();
-
 
 
 function handleOperator(nextOperator) {
@@ -73,7 +73,6 @@ function handleOperator(nextOperator) {
     calculator.waitingForSecondValue = true;
     calculator.operator = nextOperator;
 }
-
 
 
 function operate(firstOperand, secondOperand, operator) {
