@@ -22,53 +22,62 @@ body {
   grid-template-rows: repeat(5, 5rem);
 }
 
-.clear {
+.clear,
+.plus,
+.minus,
+.equals {
   grid-column-start: 4;
+}
+
+.clear {
   grid-row-start: 2;
 }
 
 .plus {
-  grid-column-start: 4;
   grid-row-start: 3;
 }
 
 .minus {
-  grid-column-start: 4;
   grid-row-start: 4;
 }
 
 .equals {
-  grid-column-start: 4;
+  grid-row-start: 5;
+}
+
+.star,
+.slash,
+.zero {
   grid-row-start: 5;
 }
 
 .star {
   grid-column-start: 1;
-  grid-row-start: 5;
 }
 
 .slash {
   grid-column-start: 3;
-  grid-row-start: 5;
 }
 .zero {
   grid-column-start: 2;
-  grid-row-start: 5;
 }
 
-.one {
-  grid-column-start: 1;
-  grid-row-start: 4;
-}
-
-.two {
-  grid-column-start: 2;
-  grid-row-start: 4;
-}
-
+.one,
+.two,
 .three {
-  grid-column-start: 3;
   grid-row-start: 4;
+}
+
+.four,
+.five,
+.six {
+  grid-row-start: 3;
+}
+
+.seven,
+.eight,
+.nine {
+  grid-row-start: 2;
 }
 
 .output {
