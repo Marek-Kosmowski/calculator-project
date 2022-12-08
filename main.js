@@ -9,7 +9,7 @@ const calculator = {
     displayValue: '0',
     firstValue: null,
     waitingForSecondValue: false,
-    operator: null,
+    operator: '',
 };
 
 function add(a, b) {
@@ -47,9 +47,9 @@ function inputNumber(number) {
 }
 
 function updateDisplay() {
-    inputField.value = calculator.displayValue;
+    inputField.value = `${calculator.operator} ${calculator.displayValue} `;
 }
-updateDisplay();
+// updateDisplay();
 
 
 
@@ -96,6 +96,7 @@ function clear() {
     calculator.firstValue = null;
     calculator.waitingForSecondValue = false;
     resultField.innerHTM = '0';
+    calculator.operator = '';
     updateDisplay();
 }
 
